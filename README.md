@@ -20,8 +20,8 @@
 <br>
 
 <h3 align="left">Connect with me:</h3>
-<a href='https://www.linkedin.com/in/juan-fariñas/'><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href='https://www.fiverr.com/jcfg_dev'><img width='70px' height='29px' src='icons/Fiverr.png'/></a>
+<a href='https://www.linkedin.com/in/juan-fariñas/' target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href='https://www.fiverr.com/jcfg_dev' target="_blank"><img width='70px' height='29px' src='icons/Fiverr.png'/></a>
 
 <h3>🧰 Tools</h3>
 <img width='40px' src='icons/VSCODE.png'/>
