@@ -1,5 +1,5 @@
 <h2>⚡️Hi, I'M Juan Fariñas <a href="https://github.com/jcfgDEV/github-profile-views-counter"><img src="https://komarev.com/ghpvc/?username=jcfgDEV&color=green"></a></h2>
-<p><img width='30px' src='icons/code.png'/> Fronted Developer</p>
+<p><img width='22px' src='icons/code.png'/> Fronted Developer</p>
 
 
 <a href="https://github.com/jcfgDEV">
@@ -15,7 +15,7 @@
 <p> 👨‍💻 I’m Developer Web </p>
 <p> 💻 I’m looking for starting my career</p>
 <p> 💫 2021 Goals: learning new Tecnologies and grow professionally </p>
-<p> 🧐 Fun fact: I can speak in Spanish and Portuguese. . .</p>
+<p> 🧐 Fact: I can speak in Spanish and Portuguese. . .</p>
 
 <br>
 
