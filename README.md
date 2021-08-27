@@ -11,7 +11,7 @@
 
 
 <h2>A few things about me</h2>
-<p> 📍 I'm Living Portugal</p>
+<p> 📍 I live in Portugal</p>
 <p> 👨‍💻 I’m Developer Web </p>
 <p> 💻 I’m looking for starting my career</p>
 <p> 💫 2021 Goals: learning new Tecnologies and grow professionally </p>
