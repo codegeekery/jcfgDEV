@@ -1,4 +1,4 @@
-<h2>⚡️Hi, I'M Juan Fariñas <a href="https://github.com/jcfgDEV/github-profile-views-counter"><img src="https://komarev.com/ghpvc/?username=jcfgDEV"></a> </h2>
+<h2>⚡️Hi, I'M Juan Fariñas <a href="https://github.com/jcfgDEV/github-profile-views-counter"><img src="https://komarev.com/ghpvc/?username=jcfgDEV&color=green"></a> </h2>
 <p>Fronted Developer</p>
 
 
@@ -22,6 +22,7 @@
 <h3 align="left">Connect with me:</h3>
 <a href='https://www.linkedin.com/in/juan-fariñas/'><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 
+<h3>🧰 Tools</h3>
 
 
 [GitHub Profile Views Counter]: https://github.com/jcfgDEV/github-profile-views-counter
