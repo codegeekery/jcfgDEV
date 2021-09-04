@@ -26,7 +26,7 @@
 <h3>🧰 Tools</h3>
 <div>
 <a href='https://code.visualstudio.com'><img width='40px' src='icons/VSCODE.png'/></a>
-<a href='https://aws.amazon.com/pt/amplify/'><img width='60px' src='icons/AmplifyIcon.png'/></a>
+<a href='https://aws.amazon.com/pt/amplify/'><img width='40px' src='icons/AmplifyIcon.png'/></a>
 </div>
   
 <h3><img width='20px' src='icons/database.png'/> DataBase</h3>
