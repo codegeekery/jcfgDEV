@@ -32,7 +32,7 @@
 <h3><img width='20px' src='icons/database.png'/> DataBase</h3>
 <div>
 <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/>
-<a href="https://www.mongodb.com/es" target="_blank"> <img src="icons/MongoDB.png" alt="MongoDB" width="40" height="40"/>
+<a href="https://www.mongodb.com/es" target="_blank"> <img src="icons/MongoDB.png" alt="MongoDB" width="100" height="30"/>
 </div>
   
 <h3><img width='20px' src='icons/framework.png'/> Frameworks</h3>
