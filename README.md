@@ -1,48 +1,33 @@
-<h2>⚡️Hi, I'M Juan Fariñas <a href="https://github.com/jcfgDEV/github-profile-views-counter"><img src="https://komarev.com/ghpvc/?username=jcfgDEV&color=green"></a></h2>
-<p><img width='22px' src='icons/code.png'/> Fronted Developer</p>
+Hi 👋 My name is Juan Gouveia
+=============================
 
+Fronted Developer
+-----------------
 
-<a href="https://github.com/jcfgDEV">
-<img width="440" align="center" src="https://github-readme-stats.vercel.app/api?username=jcfgDEV&bg_color=050505&title_color=39e010&text_color=39e010">
-</a>
-<a href="https://github.com/KarthikNayak024/github-readme-stats">
-<img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=jcfgDEV&layout=compact&bg_color=050505&title_color=39e010&text_color=39e010"/>
+Interested in the entire frontend spectrum and working on ambitious projects with positive people.
 
+* 🌍  I'm based in Venezuela
+* 🖥️  See my portfolio at [Portfolio](http://jcfgdev.github.io/Portfolio)
+* 🧠  I'm learning ReactJS
+* 🤝  I'm open to collaborating on interested opportunities. especially ambitious or large projects.
+* ⚡  Español es mi lengua Materna
 
+### Skills
 
-<h2>A few things about me</h2>
-<p> 📍 I live in Portugal</p>
-<p> 👨‍💻 I’m Developer Web </p>
-<p> 💻 I’m looking for starting my career</p>
-<p> 💫 2021 Goals: learning new Tecnologies and grow professionally </p>
-<p> 🧐 Fact: I can speak in Spanish. . .</p>
+<p align="left">
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
+<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg" width="36" height="36" alt="MongoDB" /></a>
+</p>
 
-<br>
+### Socials
 
-<h3 align="left">Connect with me</h3>
-<a href='https://www.linkedin.com/in/juan-fariñas/' target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href='https://www.fiverr.com/jcfg_dev' target="_blank"><img width='70px' height='29px' src='icons/Fiverr.png'/></a>
+<p align="left"> <a href="https://www.github.com/jcfgDEV" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a> <a href="https://www.linkedin.com/in/juan-fariñas" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a></p>
+### Badges
 
-<h3>🧰 Tools</h3>
-<div>
-<a href='https://code.visualstudio.com'><img width='40px' src='icons/VSCODE.png'/></a>
-<a href='https://aws.amazon.com/pt/amplify/'><img width='40px' src='icons/AmplifyIcon.png'/></a>
-</div>
-  
-<h3><img width='20px' src='icons/database.png'/> DataBase</h3>
-<div>
-<a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/>
-</div>
-  
-<h3><img width='20px' src='icons/framework.png'/> Frameworks</h3>
-<div>
-<a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40px" height="40px"/> </a>
-<a href='https://tailwindcss.com'><img width="60px" src="icons/Tail.png"/></a>
-</div>
+<b>My GitHub Stats</b>
 
-[GitHub Profile Views Counter]: https://github.com/jcfgDEV/github-profile-views-counter
+<a href="http://www.github.com/jcfgDEV"><img src="https://github-readme-streak-stats.herokuapp.com/?user=jcfgDEV&stroke=ffffff&background=1c1917&ring=22c55e&fire=22c55e&currStreakNum=ffffff&currStreakLabel=22c55e&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
 
-<!---
-jcfgDEV/jcfgDEV is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+<a href="https://github.com/jcfgDEV" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jcfgDEV&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=ef4444&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
