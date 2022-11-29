@@ -25,4 +25,4 @@
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jcfgdev&show_icons=true&locale=en" alt="jcfgdev" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=jcfgdev&" alt="jcfgdev" /></p>
+
