@@ -9,8 +9,6 @@
 
 - 💬 Ask me about **React Project**
 
-- 📫 How to reach me **john.f@outlook.com.br**
-
 - ⚡ Fun fact **I speak Spanish**
 
 <h3 align="left">Connect with me:</h3>
