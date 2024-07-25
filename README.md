@@ -1,3 +1,6 @@
+[![Website](https://img.shields.io/badge/HANNAHGKIM.COM-UP-pink.svg)](https://codegeekery.com/)
+<img src="https://komarev.com/ghpvc/?username=jcfgDEV&label=Profile%20views&color=0e75b6&style=flat" alt="hannah-gkim" />
+
 <h2 align="left">Hi 👋! My name is Juan and I'm a Full-stack Developer Web from Lisboa</h2>
 
 ###
