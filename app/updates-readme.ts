@@ -50,36 +50,15 @@ const main = async () => {
 // };
 
 export const generateArticlesContent = (articles: Article[]): string => {
-  const articlesContent = articles
-    .map(article => {
-      const imageUrl = article.mainImage.asset.url;
-      return `<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
-  <div style="flex: 1;">
-    <h3>
-      <a href="https://www.codegeekery.com/posts/${article.slug.current}">
-        ${article.title}
-      </a>
-    </h3>
-  </div>
-  <div>
-    <a href="https://www.codegeekery.com/posts/${article.slug.current}">
-      <img src="${imageUrl}" width="300" alt="${article.title}" />
-    </a>
-  </div>
-</div>
+  let markdown = `## Latest Blog Posts 📝\n\n`;
 
-<br/>
+  articles?.forEach((article) => {
+    markdown += `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n`;
+  });
 
----
-`;
-    })
-    .join('\n');
+  markdown += `\n[➡️ More blog posts](https://www.codegeekery.com/blog)`;
 
-  const footer = `\n<div align="right">
-<a href="https://www.codegeekery.com/blog">➡️ More blog posts</a>
-</div>`;
-
-  return articlesContent + footer;
+  return markdown;
 };
 
 
