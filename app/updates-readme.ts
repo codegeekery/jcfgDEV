@@ -8,10 +8,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); // Esto apunta a /dist
 
 // post-latest.json está en la misma carpeta (/dist)
-const POSTS_FILE = path.resolve(__dirname, 'post-latest.json'); 
+const POSTS_FILE = path.resolve(__dirname, 'post-latest.json');
 
 // README.md está un nivel arriba (en la raíz)
-const README_FILE = path.resolve(__dirname, '../README.md'); 
+const README_FILE = path.resolve(__dirname, '../README.md');
 // 📌 Marcadores en el README
 const START_MARKER = '<!-- ARTICLES:START -->';
 const END_MARKER = '<!-- ARTICLES:END -->';
@@ -43,18 +43,45 @@ const main = async () => {
 };
 
 // 📌 Genera el contenido en Markdown con los artículos
-// 📌 Genera el contenido en Markdown con los artículos
-const generateArticlesContent = (articles: Article[]): string => {
-  return articles
+// const generateArticlesContent = (articles: Article[]): string => {
+//   return articles
+//     .map(article => `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n  ![Image](${article.mainImage.asset.url})`)
+//     .join('\n\n');
+// };
+
+export const generateArticlesContent = (articles: Article[]): string => {
+  const header = `## Latest Blog Posts 📝\n\n`;
+
+  const articlesContent = articles
     .map(article => {
       const imageUrl = article.mainImage.asset.url;
-      // Agregar un estilo para ajustar el tamaño de la imagen
-      const imageMarkdown = `<img src="${imageUrl}" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">`;
-      return `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n  ${imageMarkdown}`;
-    })
-    .join('\n\n');
-};
+      return `<div align="left">
+  <a href="https://www.codegeekery.com/posts/${article.slug.current}">
+    <img src="${imageUrl}" width="300" alt="${article.title}" align="right" />
+  </a>
+  <div>
+    <h3>
+      <a href="https://www.codegeekery.com/posts/${article.slug.current}">
+        ${article.title}
+      </a>
+    </h3>
+  </div>
+</div>
 
+<br/>
+
+---
+
+`;
+    })
+    .join('\n');
+
+  const footer = `\n<div align="right">
+<a href="https://www.codegeekery.com/blog">➡️ More blog posts</a>
+</div>`;
+
+  return header + articlesContent + footer;
+};
 
 // 📌 Reemplaza el contenido dentro de los marcadores en el README
 const replaceContentBetweenMarkers = (markdown: string, startMarker: string, endMarker: string, newContent: string): string => {
