@@ -50,7 +50,7 @@ const main = async () => {
 // };
 
 export const generateArticlesContent = (articles: Article[]): string => {
-  let markdown = `## Latest Blog Posts 📝\n\n`;
+  let markdown = `# Latest Blog Posts 📝\n\n`;
 
   articles?.forEach((article) => {
     markdown += `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n`;
