@@ -32,16 +32,9 @@ jobs:
 
       - name: Update README with Latest Posts
         run: |
-          latest_posts=$(jq -r '.[0:3] | map("- <img src=\"\(.mainImage.asset.url)\" width=\"100\" height=\"100\" alt=\"\(.title)\"/>  \n  [\(.title)](https://codegekery.com/\(.slug.current))\n") | join("\n")' latest-posts.json)
-
-          cp README.md README.tmp
-
-          awk -v posts="$latest_posts" '
-            /### Tecnologias/ {print; print posts; next} 
-            {print}
-          ' README.tmp > README.md
-
-          rm README.tmp
+          latest_posts=$(jq -r '.[0:3] | map("- [\(.title)](https://codegekery.com/\(.slug.current))") | join("\n")' latest-posts.json)
+          
+          sed -i "/### Ultimos Posts/a $latest_posts" README.md
 
       - name: Commit and push if changed
         run: |
