@@ -21,6 +21,9 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Compile TypeScript
+      run: npx tsc
+
     - name: Fetch latest articles JSON
       run: |
         curl -H "X-CODEGEEKERY: ${{ secrets.SECRET_KEY }}" -o post-latest.json "https://scholarships-covered-policies-crawford.trycloudflare.com/api/latest-post"

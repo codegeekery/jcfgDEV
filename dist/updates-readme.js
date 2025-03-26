@@ -1,74 +1,43 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
-const DEV_TO_API_BASE_URL = 'https://lg-resume-calculations-note.trycloudflare.com/api/latest-post';
+// 📌 Ruta de los archivos
+const ROOT_DIR = process.cwd(); // Raíz donde se ejecuta el proceso de Node.js
+const POSTS_FILE = path.join(ROOT_DIR, 'asset', 'post-latest.json');
+const README_FILE = path.join(ROOT_DIR, 'README.md');
+// 📌 Marcadores en el README
+const START_MARKER = '<!-- ARTICLES:START -->';
+const END_MARKER = '<!-- ARTICLES:END -->';
 const main = async () => {
-    // Read the original file content
-    const filePath = '../README.md';
-    const markdown = await readFile(filePath);
-    // Proceed only if the file was read successfully
-    if (markdown) {
-        // Fetch latest articles
-        const articles = await fetchArticles();
-        // Generate new content
-        const newContent = generateArticlesContent(articles);
-        // Replace content between markers
-        const START_MARKER = '<!-- ARTICLES:START -->';
-        const END_MARKER = '<!-- ARTICLES:END -->';
-        const updatedMarkdown = replaceContentBetweenMarkers(markdown, START_MARKER, END_MARKER, newContent);
-        // Save the updated file
-        await saveFile(filePath, updatedMarkdown);
-    }
-};
-// Fetch latest articles from the provided API
-const fetchArticles = async () => {
-    const response = await fetch(DEV_TO_API_BASE_URL, {
-        method: 'GET',
-        headers: {
-            'X-CODEGEEKERY': process.env.SECRET_KEY || '', // Usar el secret
-        },
-    });
-    const data = await response.json();
-    // Map the data to match the ArticlePreview interface
-    return data.map((article) => ({
-        title: article.title,
-        url: `https://lg-resume-calculations-note.trycloudflare.com/posts/${article.slug.current}`, // Construct URL for the article
-        imageUrl: article.mainImage.asset.url, // Image URL
-    }));
-};
-// Generate markdown from articles
-const generateArticlesContent = (articles) => {
-    let markdown = '';
-    articles.forEach((article) => {
-        markdown += `- [${article.title}](${article.url})\n![Image](${article.imageUrl})\n`;
-    });
-    return markdown;
-};
-// Read file
-const readFile = async (filePath) => {
     try {
-        const absolutePath = path.resolve(import.meta.dirname, filePath);
-        console.log('Reading file from:', absolutePath);
-        return await fs.readFile(absolutePath, 'utf8');
+        console.log('📥 Leyendo post-latest.json...');
+        const rawData = await fs.readFile(POSTS_FILE, 'utf8');
+        const articles = JSON.parse(rawData); // Usamos el tipo Article
+        if (!Array.isArray(articles) || articles.length === 0) {
+            console.warn('⚠️ No se encontraron artículos en post-latest.json.');
+            return;
+        }
+        console.log('📄 Leyendo README.md...');
+        const markdown = await fs.readFile(README_FILE, 'utf8');
+        // Generar nuevo contenido para el README
+        const newContent = generateArticlesContent(articles);
+        const updatedMarkdown = replaceContentBetweenMarkers(markdown, START_MARKER, END_MARKER, newContent);
+        console.log('💾 Guardando cambios en README.md...');
+        await fs.writeFile(README_FILE, updatedMarkdown, 'utf8');
+        console.log('✅ README.md actualizado con éxito.');
     }
-    catch (err) {
-        console.error('Error reading file:', err);
-        return null;
+    catch (error) {
+        console.error('❌ Error durante la actualización del README:', error);
     }
 };
-// Generate updated markdown
+// 📌 Genera el contenido en Markdown con los artículos
+const generateArticlesContent = (articles) => {
+    return articles
+        .map(article => `- [${article.title}](https://scholarships-covered-policies-crawford.trycloudflare.com/posts/${article.slug.current})\n  ![Image](${article.mainImage.asset.url})`)
+        .join('\n\n');
+};
+// 📌 Reemplaza el contenido dentro de los marcadores en el README
 const replaceContentBetweenMarkers = (markdown, startMarker, endMarker, newContent) => {
     const regex = new RegExp(`(${startMarker})([\\s\\S]*?)(${endMarker})`, 'g');
-    return markdown.replace(regex, `$1\n${newContent}$3`);
-};
-// Save file
-const saveFile = async (filePath, content) => {
-    try {
-        const absolutePath = path.resolve(import.meta.dirname, filePath);
-        await fs.writeFile(absolutePath, content, 'utf8');
-        console.log('File has been saved successfully!');
-    }
-    catch (err) {
-        console.error('Error saving file:', err);
-    }
+    return markdown.replace(regex, `$1\n${newContent}\n$3`);
 };
 main();
