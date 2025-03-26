@@ -15,31 +15,39 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Puedes ajustar la versión de Node.js según lo que uses en tu proyecto
+          node-version: '14'
 
       - name: Install dependencies
         run: |
-          npm install axios  # Instala axios para hacer la solicitud HTTP
+          npm install axios
 
       - name: Fetch latest posts from the API
         env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}  # Accede a tu SECRET_KEY almacenado en GitHub Secrets
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
           SECRET_KEY="${{ secrets.SECRET_KEY }}"
-          # Convertir SECRET_KEY en HMAC (SHA256)
+
           HMAC_KEY=$(echo -n "$SECRET_KEY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | sed 's/^.* //')
-          
-          # Realizar la solicitud GET a la API
+
+          # Realiza la solicitud a la API y guarda la respuesta en latest-posts.json
           curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://italiano-cambridge-yeah-affected.trycloudflare.com/api/latest-post" -o latest-posts.json
+
+          # Inspecciona el contenido del archivo JSON
+          cat latest-posts.json
 
       - name: Update README with the latest posts
         run: |
-          # Leer los últimos 3 posts desde el archivo JSON
+          # Revisa el contenido del archivo JSON
+          echo "Contenido del archivo JSON: $(cat latest-posts.json)"
+
+          # Extrae los primeros 3 posts de la respuesta JSON
           POSTS=$(cat latest-posts.json | jq -r '.[0:3] | map("\(.title) - \(.slug.current)") | join("\n")')
-          
-          # Incluir los últimos posts en el README
+
+          echo "Posts extraídos: $POSTS"
+
+          # Inserta los posts en el archivo README.md
           sed -i "/## Últimos Posts/a\  \n$POSTS\n" README.md
-          
+
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
