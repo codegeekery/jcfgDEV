@@ -37,6 +37,7 @@ const main = async () => {
   }
 };
 
+
 // 📌 Genera el contenido en Markdown con los artículos
 const generateArticlesContent = (articles: Article[]): string => {
   return articles
