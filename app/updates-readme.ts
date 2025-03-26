@@ -43,11 +43,18 @@ const main = async () => {
 };
 
 // 📌 Genera el contenido en Markdown con los artículos
+// 📌 Genera el contenido en Markdown con los artículos
 const generateArticlesContent = (articles: Article[]): string => {
   return articles
-    .map(article => `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n  ![Image](${article.mainImage.asset.url})`)
+    .map(article => {
+      const imageUrl = article.mainImage.asset.url;
+      // Agregar un estilo para ajustar el tamaño de la imagen
+      const imageMarkdown = `<img src="${imageUrl}" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">`;
+      return `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n  ${imageMarkdown}`;
+    })
     .join('\n\n');
 };
+
 
 // 📌 Reemplaza el contenido dentro de los marcadores en el README
 const replaceContentBetweenMarkers = (markdown: string, startMarker: string, endMarker: string, newContent: string): string => {
