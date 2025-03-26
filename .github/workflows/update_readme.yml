@@ -27,7 +27,7 @@ jobs:
 
     - name: Fetch latest articles JSON
       run: |
-        curl -H "X-CODEGEEKERY: ${{ secrets.SECRET_KEY }}" -o ./dist/post-latest.json "https://www.codegeekery.com/api/latest-post"
+        curl -H "X-CODEGEEKERY: ${{ secrets.SECRET_KEY }}" -o ./dist/post-latest.json "https://www.codegeekery.com/api/latest"
 
     - name: Run script to update README.md
       run: node ./dist/updates-readme.js
