@@ -31,3 +31,17 @@ jobs:
 
           # Realiza la solicitud a la API y guarda la respuesta en latest-posts.json
           curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://lg-resume-calculations-note.trycloudflare.com/api/latest-post"
+
+      - name: Update README
+        run: |
+          echo "# Latest Blog Posts" > README.md
+          echo "" >> README.md
+          jq -r '.[] | "- ![\(.title)](\(.mainImage.asset.url)) 
+          [\(.title)](https://codegekery.com/posts/\(.slug.current))"' latest-posts.json >> README.md
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Updated README on $(date '+%Y-%m-%d %H:%M:%S')" && git push)
