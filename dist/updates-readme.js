@@ -40,34 +40,34 @@ const main = async () => {
 //     .join('\n\n');
 // };
 export const generateArticlesContent = (articles) => {
-    const header = `## Latest Blog Posts 📝\n\n`;
     const articlesContent = articles
         .map(article => {
         const imageUrl = article.mainImage.asset.url;
-        return `<div align="left">
-  <a href="https://www.codegeekery.com/posts/${article.slug.current}">
-    <img src="${imageUrl}" width="300" alt="${article.title}" align="right" />
-  </a>
-  <div>
+        return `<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+  <div style="flex: 1;">
     <h3>
       <a href="https://www.codegeekery.com/posts/${article.slug.current}">
         ${article.title}
       </a>
     </h3>
   </div>
+  <div>
+    <a href="https://www.codegeekery.com/posts/${article.slug.current}">
+      <img src="${imageUrl}" width="300" alt="${article.title}" />
+    </a>
+  </div>
 </div>
 
 <br/>
 
 ---
-
 `;
     })
         .join('\n');
     const footer = `\n<div align="right">
 <a href="https://www.codegeekery.com/blog">➡️ More blog posts</a>
 </div>`;
-    return header + articlesContent + footer;
+    return articlesContent + footer;
 };
 // 📌 Reemplaza el contenido dentro de los marcadores en el README
 const replaceContentBetweenMarkers = (markdown, startMarker, endMarker, newContent) => {
