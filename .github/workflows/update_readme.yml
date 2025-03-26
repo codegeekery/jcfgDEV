@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -18,18 +17,23 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '20'
-    
-    - name: Install dependencies
-      run: |
-        npm install
-        npm install typescript --save-dev  # Instalar TypeScript si no está instalado
 
-    - name: Compile TypeScript
+    - name: Install dependencies
+      run: npm install
+
+    - name: Fetch latest articles JSON
       run: |
-        npx tsc  # Compilar el código TypeScript a JavaScript
+        curl -H "X-CODEGEEKERY: ${{ secrets.SECRET_KEY }}" \ -o post-latest.json \ https://scholarships-covered-policies-crawford.trycloudflare.com/api/latest-post
 
     - name: Run script to update README.md
-      env:
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      run: node updates-readme.js
+
+    - name: Commit and push changes
       run: |
-        node ./dist/updates-readme.js
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Update README - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+        git push
+      continue-on-error: true  # Evita fallos si no hay cambios
+
