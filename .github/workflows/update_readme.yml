@@ -17,14 +17,19 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'  # O la versión que estés usando
+        node-version: '20'
     
     - name: Install dependencies
       run: |
         npm install
-    
+        npm install typescript --save-dev  # Instalar TypeScript si no está instalado
+
+    - name: Compile TypeScript
+      run: |
+        npx tsc  # Compilar el código TypeScript a JavaScript
+
     - name: Run script to update README.md
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
-        node ./updates-readme.ts
+        node ./dist/updates-readme.js
