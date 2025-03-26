@@ -30,12 +30,63 @@ src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-th
 
 # My Latest Articles 📝
 <!-- ARTICLES:START -->
-- [Astro: The New #1 Framework in the State of JavaScript 2024](https://www.codegeekery.com/posts/astro-the-new-1-framework-in-the-state-of-javascript-2024)
-  <img src="https://cdn.sanity.io/images/dtnjj5n5/production/c9a94c50bfcd8bfc018a542910ad625f83acff52-1200x900.jpg" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">
+## Latest Blog Posts 📝
 
-- [How to Optimize Web Performance: Best Practices](https://www.codegeekery.com/posts/how-to-optimize-web-performance-best-practices)
-  <img src="https://cdn.sanity.io/images/dtnjj5n5/production/376b8dd0eadba615a22d7025aae8addf86d982c1-770x400.jpg" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">
+<div align="left">
+  <a href="https://www.codegeekery.com/posts/astro-the-new-1-framework-in-the-state-of-javascript-2024">
+    <img src="https://cdn.sanity.io/images/dtnjj5n5/production/c9a94c50bfcd8bfc018a542910ad625f83acff52-1200x900.jpg" width="300" alt="Astro: The New #1 Framework in the State of JavaScript 2024" align="right" />
+  </a>
+  <div>
+    <h3>
+      <a href="https://www.codegeekery.com/posts/astro-the-new-1-framework-in-the-state-of-javascript-2024">
+        Astro: The New #1 Framework in the State of JavaScript 2024
+      </a>
+    </h3>
+  </div>
+</div>
 
-- [Why Node.js is the Best Choice for Backend Development](https://www.codegeekery.com/posts/why-node-js-is-the-best-choice-for-backend-development)
-  <img src="https://cdn.sanity.io/images/dtnjj5n5/production/a63e457f35c96800144d15a915e35dd9674f360f-1024x1024.webp" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">
+<br/>
+
+---
+
+
+<div align="left">
+  <a href="https://www.codegeekery.com/posts/how-to-optimize-web-performance-best-practices">
+    <img src="https://cdn.sanity.io/images/dtnjj5n5/production/376b8dd0eadba615a22d7025aae8addf86d982c1-770x400.jpg" width="300" alt="How to Optimize Web Performance: Best Practices" align="right" />
+  </a>
+  <div>
+    <h3>
+      <a href="https://www.codegeekery.com/posts/how-to-optimize-web-performance-best-practices">
+        How to Optimize Web Performance: Best Practices
+      </a>
+    </h3>
+  </div>
+</div>
+
+<br/>
+
+---
+
+
+<div align="left">
+  <a href="https://www.codegeekery.com/posts/why-node-js-is-the-best-choice-for-backend-development">
+    <img src="https://cdn.sanity.io/images/dtnjj5n5/production/a63e457f35c96800144d15a915e35dd9674f360f-1024x1024.webp" width="300" alt="Why Node.js is the Best Choice for Backend Development" align="right" />
+  </a>
+  <div>
+    <h3>
+      <a href="https://www.codegeekery.com/posts/why-node-js-is-the-best-choice-for-backend-development">
+        Why Node.js is the Best Choice for Backend Development
+      </a>
+    </h3>
+  </div>
+</div>
+
+<br/>
+
+---
+
+
+<div align="right">
+<a href="https://www.codegeekery.com/blog">➡️ More blog posts</a>
+</div>
 <!-- ARTICLES:END -->
