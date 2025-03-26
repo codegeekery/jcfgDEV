@@ -1,10 +1,17 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
 import { Article } from './types'; // Importar el tipo
+import { fileURLToPath } from 'node:url';
 
 // 📌 Ruta de los archivos
-const POSTS_FILE = path.resolve(__dirname, 'post-latest.json');
-const README_FILE = path.resolve(__dirname, 'README.md');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); // Esto apunta a /dist
+
+// post-latest.json está en la misma carpeta (/dist)
+const POSTS_FILE = path.resolve(__dirname, 'post-latest.json'); 
+
+// README.md está un nivel arriba (en la raíz)
+const README_FILE = path.resolve(__dirname, '../README.md'); 
 // 📌 Marcadores en el README
 const START_MARKER = '<!-- ARTICLES:START -->';
 const END_MARKER = '<!-- ARTICLES:END -->';
