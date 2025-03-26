@@ -9,6 +9,7 @@ A los **12 años**, Conoci a un grupo de amigos que jugaban videos juegos, lo qu
 Hoy en día, sigo **emprendiendo mi camino autodidacta** 🚀.
 
 
+
 <a href="https://www.x.com/codegeekery" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-the-badge&color=10b981&labelColor=1c1917"
 /></a>
