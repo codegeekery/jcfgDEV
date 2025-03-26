@@ -1,6 +1,6 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
-import { ArticlePreview } from './types.ts';
+import { ArticlePreview } from './types';
 
 const DEV_TO_API_BASE_URL = 'https://lg-resume-calculations-note.trycloudflare.com/api/latest-post';
 
