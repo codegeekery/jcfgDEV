@@ -30,11 +30,12 @@ jobs:
           HMAC_KEY=$(echo -n "$SECRET_KEY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | awk '{print $NF}')
           curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://lg-resume-calculations-note.trycloudflare.com/api/latest-post" -o latest-posts.json
 
-      - name: Update README with Latest Posts
+      - name: Update README
         run: |
-          jq -r '.[] | "- ![\(.title)](\(.mainImage.asset.url)) [\(.title)](https://codegekery.com/posts/\(.slug.current))"' latest-posts.json
-
-          sed -i "/### Ultimos Posts/a $latest_posts" README.md
+          echo "# Latest Blog Posts" > README.md
+          echo "" >> README.md
+          jq -r '.[] | "- ![\(.title)](\(.mainImage.asset.url)) 
+          [\(.title)](https://codegekery.com/posts/\(.slug.current))"' latest-posts.json >> README.md
 
       - name: Commit and push if changed
         run: |
