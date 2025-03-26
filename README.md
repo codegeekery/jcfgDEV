@@ -31,11 +31,11 @@ src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-th
 # My Latest Articles 📝
 <!-- ARTICLES:START -->
 - [Astro: The New #1 Framework in the State of JavaScript 2024](https://www.codegeekery.com/posts/astro-the-new-1-framework-in-the-state-of-javascript-2024)
-  ![Image](https://cdn.sanity.io/images/dtnjj5n5/production/c9a94c50bfcd8bfc018a542910ad625f83acff52-1200x900.jpg)
+  <img src="https://cdn.sanity.io/images/dtnjj5n5/production/c9a94c50bfcd8bfc018a542910ad625f83acff52-1200x900.jpg" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">
 
 - [How to Optimize Web Performance: Best Practices](https://www.codegeekery.com/posts/how-to-optimize-web-performance-best-practices)
-  ![Image](https://cdn.sanity.io/images/dtnjj5n5/production/376b8dd0eadba615a22d7025aae8addf86d982c1-770x400.jpg)
+  <img src="https://cdn.sanity.io/images/dtnjj5n5/production/376b8dd0eadba615a22d7025aae8addf86d982c1-770x400.jpg" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">
 
 - [Why Node.js is the Best Choice for Backend Development](https://www.codegeekery.com/posts/why-node-js-is-the-best-choice-for-backend-development)
-  ![Image](https://cdn.sanity.io/images/dtnjj5n5/production/a63e457f35c96800144d15a915e35dd9674f360f-1024x1024.webp)
+  <img src="https://cdn.sanity.io/images/dtnjj5n5/production/a63e457f35c96800144d15a915e35dd9674f360f-1024x1024.webp" alt="Image" style="width: 100px; height: auto; margin-right: 10px;">
 <!-- ARTICLES:END -->
