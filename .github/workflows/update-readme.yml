@@ -30,7 +30,7 @@ jobs:
           HMAC_KEY=$(echo -n "$SECRET_KEY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | sed 's/^.* //')
 
           # Realiza la solicitud a la API y guarda la respuesta en latest-posts.json
-          curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://lg-resume-calculations-note.trycloudflare.com/api/latest-post"
+          curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://lg-resume-calculations-note.trycloudflare.com/api/latest-post" -o latest-posts.json
 
       - name: Update README
         run: |
