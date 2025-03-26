@@ -30,28 +30,4 @@ jobs:
           HMAC_KEY=$(echo -n "$SECRET_KEY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | sed 's/^.* //')
 
           # Realiza la solicitud a la API y guarda la respuesta en latest-posts.json
-          curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://italiano-cambridge-yeah-affected.trycloudflare.com/api/latest-post" -o latest-posts.json
-
-          # Inspecciona el contenido del archivo JSON
-          cat latest-posts.json
-
-      - name: Update README with the latest posts
-        run: |
-          # Revisa el contenido del archivo JSON
-          echo "Contenido del archivo JSON: $(cat latest-posts.json)"
-
-          # Extrae los primeros 3 posts de la respuesta JSON
-          POSTS=$(cat latest-posts.json | jq -r '.[0:3] | map("\(.title) - \(.slug.current)") | join("\n")')
-
-          echo "Posts extraídos: $POSTS"
-
-          # Inserta los posts en el archivo README.md
-          sed -i "/## Últimos Posts/a\  \n$POSTS\n" README.md
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Actualizar README con los últimos posts"
-          git push
+          curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://italiano-cambridge-yeah-affected.trycloudflare.com/api/latest-post"
