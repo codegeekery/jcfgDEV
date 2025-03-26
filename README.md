@@ -2,9 +2,9 @@
 
 Hola Fellows 👋, me llamo **Juan** y nací en **1999**.  
 
-Desde pequeño, me gustó mucho la **tecnología**. Descubrí mi primera PC a los **7 años**, aunque en ese momento la usaba principalmente para ver mi caricatura favorita de la época: _Scooby-Doo_ 🐶🔎😂.  
+Desde pequeño, mostraba mucho interes por la **tecnología**. Mis Padres a los **7 años** me regalaron una computadora, aunque en ese momento la usaba principalmente para ver mi caricatura favorita de la época Scooby Doo 🐶🔎😂.
 
-A los **12 años**, mi interés por los **videojuegos** creció, lo que despertó aún más mi pasión por la tecnología.  
+A los **12 años**, Conoci a un grupo de amigos que jugaban videos juegos, lo que despertó aún más mi curiosidad por la tecnologia. Mi primer Juego que juge se llama Mu Online. aprendi muchas cosas que a dia de hoy se aplican como tecnologia cuando empeze a jugar el juego siempre me preguntaba como se almacenaban las cosas dentro del juego como sabia el juego que ese item estaba en mi inventario y cosas asi fueron lo que me motivo a descubrir mas sobre la tecnologia
 
 Hoy en día, sigo **emprendiendo mi camino autodidacta** 🚀.
 
