@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ESNext",  // Usar un módulo compatible con import.meta
-    "target": "ESNext",  // Asegurarse de que el target también sea ESNext o compatible
-    "moduleResolution": "node",  // Resolución de módulos tipo Node.js
-    "esModuleInterop": true,  // Si necesitas interoperabilidad con módulos ES
-    "strict": true,  // Habilitar modo estricto para evitar posibles errores
-    "resolveJsonModule": true,  // Si usas módulos JSON, habilítalo
-    "skipLibCheck": true  // Omite la verificación de tipo en los archivos de definición de librerías
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true,  // Habilitar 'noEmit' para usar 'allowImportingTsExtensions'
+    "allowImportingTsExtensions": true  // Permitir importar extensiones '.ts'
   }
 }
