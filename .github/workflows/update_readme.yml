@@ -23,7 +23,7 @@ jobs:
 
     - name: Fetch latest articles JSON
       run: |
-        curl -H "X-CODEGEEKERY: ${{ secrets.SECRET_KEY }}" \ -o post-latest.json \ https://scholarships-covered-policies-crawford.trycloudflare.com/api/latest-post
+        curl -H "X-CODEGEEKERY: ${{ secrets.SECRET_KEY }}" -o post-latest.json "https://scholarships-covered-policies-crawford.trycloudflare.com/api/latest-post"
 
     - name: Run script to update README.md
       run: node updates-readme.js
