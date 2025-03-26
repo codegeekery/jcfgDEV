@@ -3,9 +3,8 @@ import path from 'node:path';
 import { Article } from './types'; // Importar el tipo
 
 // 📌 Ruta de los archivos
-const ROOT_DIR = process.cwd(); // Raíz donde se ejecuta el proceso de Node.js
-const POSTS_FILE = path.join(ROOT_DIR, 'asset', 'post-latest.json');
-const README_FILE = path.join(ROOT_DIR, 'README.md')
+const POSTS_FILE = path.resolve('post-latest.json');
+const README_FILE = path.resolve('README.md');
 
 // 📌 Marcadores en el README
 const START_MARKER = '<!-- ARTICLES:START -->';
@@ -36,7 +35,6 @@ const main = async () => {
     console.error('❌ Error durante la actualización del README:', error);
   }
 };
-
 
 // 📌 Genera el contenido en Markdown con los artículos
 const generateArticlesContent = (articles: Article[]): string => {
