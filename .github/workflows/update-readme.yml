@@ -1,0 +1,49 @@
+name: Update README with Latest Posts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Puedes ajustar la versión de Node.js según lo que uses en tu proyecto
+
+      - name: Install dependencies
+        run: |
+          npm install axios  # Instala axios para hacer la solicitud HTTP
+
+      - name: Fetch latest posts from the API
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}  # Accede a tu SECRET_KEY almacenado en GitHub Secrets
+        run: |
+          SECRET_KEY="${{ secrets.SECRET_KEY }}"
+          # Convertir SECRET_KEY en HMAC (SHA256)
+          HMAC_KEY=$(echo -n "$SECRET_KEY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | sed 's/^.* //')
+          
+          # Realizar la solicitud GET a la API
+          curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://italiano-cambridge-yeah-affected.trycloudflare.com/api/latest-post" -o latest-posts.json
+
+      - name: Update README with the latest posts
+        run: |
+          # Leer los últimos 3 posts desde el archivo JSON
+          POSTS=$(cat latest-posts.json | jq -r '.[0:3] | map("\(.title) - \(.slug.current)") | join("\n")')
+          
+          # Incluir los últimos posts en el README
+          sed -i "/## Últimos Posts/a\  \n$POSTS\n" README.md
+          
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Actualizar README con los últimos posts"
+          git push
