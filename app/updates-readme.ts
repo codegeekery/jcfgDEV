@@ -45,7 +45,7 @@ const main = async () => {
 // 📌 Genera el contenido en Markdown con los artículos
 const generateArticlesContent = (articles: Article[]): string => {
   return articles
-    .map(article => `- [${article.title}](https://scholarships-covered-policies-crawford.trycloudflare.com/posts/${article.slug.current})\n  ![Image](${article.mainImage.asset.url})`)
+    .map(article => `- [${article.title}](https://www.codegeekery.com/posts/${article.slug.current})\n  ![Image](${article.mainImage.asset.url})`)
     .join('\n\n');
 };
 
