@@ -1,24 +1,10 @@
-Hi 👋 My name is Juan Gouveia
-=============================
-
-Full Stack Developer
---------------------
-
-I've been learning to code for 5 years, after switching careers. I started with HTML and CSS but found my passion for backend development. I enjoy creating efficient APIs, optimizing database structures
-
-* 🌍  I'm based in Venezuela
-* 🖥️  See my portfolio at [Website](http://codegeekery.com)
-* ✉️  You can contact me at [juan@codegeekery.com](mailto:juan@codegeekery.com)
-* 🚀  I'm currently working on [Amazon Reconciliation Automation](http://mbmwholesalers.com)
-* 🧠  I'm learning Microservices Architecture
-* 🤝  I'm open to collaborating on Building innovative web applications, enhancing e-commerce systems, and contributing to open-source projects.
-* ⚡  When I’m not coding, I enjoy watching movies and gaming
+Hola Fellows. Me llamo Juan naci en 1999. Desde Pequeño me gusto mucho la tecnologia. Empeze descubriendo mi primera pc a los 7 años aunque lo usaba mucho para ver mi caricatura favorita de la epoca 😂😂 Scooby-Doo. Cuando cumpli 12 años me empeze a interesar mucho por los videos juegos y eso desperto mucho la pasion que tengo por la tecnologia y a dia de hoy sigo emprendiendo mi camino autodidacta
 
 <a href="https://www.x.com/codegeekery" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-the-badge&color=10b981&labelColor=1c1917"
 /></a>
 
-### Skills
+### Tecnologias
 
 
 <p align="left">
@@ -26,12 +12,8 @@ src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-th
 </p>
 
 
-### Socials
+### Redes Sociales
 
 <p align="left"> <a href="https://www.github.com/codegeekery" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /> </picture> </a> <a href="https://www.x.com/codegeekery" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /> </picture> </a></p>
 
-### Badges
 
-<b>My GitHub Stats</b>
-
-<a href="http://www.github.com/codegeekery"><img src="https://github-readme-stats.vercel.app/api?username=codegeekery&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=10b981&bg_color=1c1917&hide_border=true&show_icons=true" alt="codegeekery's GitHub stats" /></a>
