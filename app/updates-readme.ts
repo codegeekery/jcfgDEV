@@ -3,9 +3,8 @@ import path from 'node:path';
 import { Article } from './types'; // Importar el tipo
 
 // 📌 Ruta de los archivos
-const POSTS_FILE = path.resolve('post-latest.json');
-const README_FILE = path.resolve('README.md');
-
+const POSTS_FILE = path.resolve(__dirname, 'post-latest.json');
+const README_FILE = path.resolve(__dirname, 'README.md');
 // 📌 Marcadores en el README
 const START_MARKER = '<!-- ARTICLES:START -->';
 const END_MARKER = '<!-- ARTICLES:END -->';
