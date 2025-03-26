@@ -15,25 +15,30 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Install dependencies
         run: |
           npm install axios
+
       - name: Fetch latest posts from the API
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
           SECRET_KEY="${{ secrets.SECRET_KEY }}"
           HMAC_KEY=$(echo -n "$SECRET_KEY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | sed 's/^.* //')
-          # Realiza la solicitud a la API y guarda la respuesta en latest-posts.json
+          # Make the API request and save the response to latest-posts.json
           curl -H "X-CODEGEEKERY: $HMAC_KEY" "https://lg-resume-calculations-note.trycloudflare.com/api/latest-post" -o latest-posts.json
+
       - name: Update README
         run: |
           echo "# Latest Blog Posts" > README.md
           echo "" >> README.md
-          jq -r '.[] | "- ![\(.title)](\(.mainImage.asset.url)) 
-          [\(.title)](https://codegekery.com/posts/\(.slug.current))"' latest-posts.json >> README.md
+          jq -r '.[] | "- ![\(.title)](\(.mainImage.asset.url)) \n[\(.title)](https://codegekery.com/posts/\(.slug.current))"' latest-posts.json >> README.md
+          
+          # Insert the latest blog posts in the section "### Últimos Posts"
+          sed -i '/### Últimos Posts/ {r latest-posts.json' -e 'd}' README.md
+
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions"
