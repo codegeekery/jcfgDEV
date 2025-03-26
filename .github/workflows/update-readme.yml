@@ -32,8 +32,8 @@ jobs:
 
       - name: Update README with Latest Posts
         run: |
-          latest_posts=$(jq -r '.[0:3] | map("- [\(.title)](https://codegekery.com/\(.slug.current))") | join("\n")' latest-posts.json)
-          
+          jq -r '.[] | "- ![\(.title)](\(.mainImage.asset.url)) [\(.title)](https://codegekery.com/posts/\(.slug.current))"' latest-posts.json
+
           sed -i "/### Ultimos Posts/a $latest_posts" README.md
 
       - name: Commit and push if changed
