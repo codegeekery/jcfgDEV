@@ -1,4 +1,13 @@
-Hola Fellows. Me llamo Juan naci en 1999. Desde Pequeño me gusto mucho la tecnologia. Empeze descubriendo mi primera pc a los 7 años aunque lo usaba mucho para ver mi caricatura favorita de la epoca 😂😂 Scooby-Doo. Cuando cumpli 12 años me empeze a interesar mucho por los videos juegos y eso desperto mucho la pasion que tengo por la tecnologia y a dia de hoy sigo emprendiendo mi camino autodidacta
+## Sobre Mí  
+
+Hola Fellows 👋, me llamo **Juan** y nací en **1999**.  
+
+Desde pequeño, me gustó mucho la **tecnología**. Descubrí mi primera PC a los **7 años**, aunque en ese momento la usaba principalmente para ver mi caricatura favorita de la época: _Scooby-Doo_ 🐶🔎😂.  
+
+A los **12 años**, mi interés por los **videojuegos** creció, lo que despertó aún más mi pasión por la tecnología.  
+
+Hoy en día, sigo **emprendiendo mi camino autodidacta** 🚀.
+
 
 <a href="https://www.x.com/codegeekery" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-the-badge&color=10b981&labelColor=1c1917"
