@@ -39,4 +39,11 @@ src="https://img.shields.io/twitter/follow/codegeekery?logo=twitter&style=for-th
 
 
 <!-- ARTICLES:START -->
+# Latest Blog Posts 📝
+
+- [Astro: The New #1 Framework in the State of JavaScript 2024](https://www.codegeekery.com/posts/astro-the-new-1-framework-in-the-state-of-javascript-2024)
+- [How to Optimize Web Performance: Best Practices](https://www.codegeekery.com/posts/how-to-optimize-web-performance-best-practices)
+- [Why Node.js is the Best Choice for Backend Development](https://www.codegeekery.com/posts/why-node-js-is-the-best-choice-for-backend-development)
+
+[➡️ More blog posts](https://www.codegeekery.com/blog)
 <!-- ARTICLES:END -->
